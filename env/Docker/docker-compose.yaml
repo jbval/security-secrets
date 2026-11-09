@@ -1,0 +1,9 @@
+
+services:
+  app:
+    image: securitysecrets-env:latest
+    container_name: securitysecrets-env
+    ports:
+      - "5000:8080"
+    env_file:
+      - ./.env.test-prod
