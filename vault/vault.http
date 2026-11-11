@@ -1,0 +1,6 @@
+@env_HostAddress = http://localhost:5148
+
+GET {{env_HostAddress}}/testLogin/
+Accept: application/json
+
+###

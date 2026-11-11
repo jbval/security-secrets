@@ -1,0 +1,15 @@
+services:
+  openBao:
+    image: openbao/openbao:2.7
+    container_name: openbao
+    ports:
+      - 8200:8200
+      - 8201:8201
+    environment:
+      SKIP_CHOWN: "true"
+      VAULT_DEV_ROOT_TOKEN_ID: myroot
+      BAO_ADDR: "http://127.0.0.1:8200"
+    volumes:
+      - ./config:/openbao/config
+      - ./data/openbao_logs:/openbao/logs
+      - ./data/openbao_file:/openbao/file
